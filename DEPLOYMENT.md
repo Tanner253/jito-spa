@@ -10,7 +10,8 @@
 ```bash
 cd jito-spa
 npm install
-npm run deploy
+npm run build
+vercel --prod
 ```
 
 ## 📦 Setup Steps
@@ -31,7 +32,7 @@ const PLACEHOLDER_CA = "YourActualTrenchPadTokenAddress"
 ### 3. Deploy
 ```bash
 npm run build
-npm run deploy
+vercel --prod
 ```
 
 ## 🔧 Configuration
@@ -47,21 +48,35 @@ NEXT_PUBLIC_FREE_MC_THRESHOLD=5000000
 ### Vercel Settings
 - **Build Command**: `npm run build`
 - **Output Directory**: `out`
-- **Node.js Version**: 18.x
+- **Node.js Version**: 18.x or higher
+- **Framework Preset**: Next.js
+
+## ✅ Recent Fixes
+
+### Styling Issues Fixed
+- ✅ **Removed asset path issues** - Fixed `next.config.js` that was causing CSS/styling problems on Vercel
+- ✅ **Improved space utilization** - Removed height constraints and overflow restrictions
+- ✅ **Better responsive design** - Enhanced layout for all screen sizes
+- ✅ **Natural scrolling** - Removed artificial height limits for better content flow
+
+### Layout Improvements
+- ✅ **Larger typography** - Increased font sizes for better readability
+- ✅ **Better spacing** - Improved padding and margins throughout
+- ✅ **Enhanced cards** - Larger, more prominent content sections
+- ✅ **Improved features** - Added descriptions to feature cards
 
 ## 🎯 Features Included
 
 ### ✅ Branding
-- **TrenchPad** name and rocket icon
-- **Professional blue/purple gradient** color scheme
-- **Glass morphism** design elements
-- **No-scroll dense layout** - everything visible at once
+- **TrenchPad** name and logo
+- **Green gradient** color scheme (trench colors)
+- **Modern design** with glass morphism effects
+- **Responsive layout** - works on all devices
 
 ### ✅ Content
 - **Clear value proposition** - Professional bundle trading
-- **Pricing tiers** - $497 early access, FREE at $5M MC
+- **Pricing tiers** - Progressive pricing from 10 SOL to FREE
 - **Security promises** - Local execution, zero data collection
-- **Performance stats** - 94% success rate, 2.3x avg profit
 - **Feature highlights** - 25-wallet coordination, MEV protection
 
 ### ✅ Social Integration
@@ -69,13 +84,13 @@ NEXT_PUBLIC_FREE_MC_THRESHOLD=5000000
 - **Telegram**: @osknyo  
 - **Discord**: osknyo
 - **Token CA copy** functionality
-- **External links** to pump.fun and charts
 
 ### ✅ Technical
 - **Next.js 14** with static export
-- **Responsive design** - works on all devices
+- **Tailwind CSS** for styling
 - **Fast loading** - optimized for performance
 - **SEO optimized** - meta tags and descriptions
+- **Smooth animations** - Engaging user experience
 
 ## 🔴 Live Demo
 
@@ -89,6 +104,18 @@ The design is fully responsive and looks great on:
 - Desktop (primary focus)
 - Tablets 
 - Mobile phones
+
+## 🐛 Troubleshooting
+
+### Styling Not Loading on Vercel
+- ✅ **Fixed**: Removed problematic `assetPrefix` and `basePath` from `next.config.js`
+- Ensure your build completes without errors
+- Check Vercel build logs for any CSS compilation issues
+
+### Layout Issues
+- ✅ **Fixed**: Removed height constraints and overflow restrictions
+- Content now flows naturally and scrolls properly
+- Better space utilization across all screen sizes
 
 ---
 
