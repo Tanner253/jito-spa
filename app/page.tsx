@@ -50,6 +50,9 @@ export default function TrenchPadLanding() {
           </div>
           
           <div className="flex items-center space-x-6">
+            <a href="https://github.com/Tanner253" target="_blank" className="text-gray-400 hover:text-white transition-colors font-medium">
+              GitHub
+            </a>
             <a href="https://x.com/osknyo_dev" target="_blank" className="text-gray-400 hover:text-white transition-colors font-medium">
               Twitter
             </a>
