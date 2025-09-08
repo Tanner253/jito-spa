@@ -24,10 +24,10 @@ export default function TrenchPadLanding() {
 
   const pricingTiers = [
     { mc: '$100k MC', price: '10 SOL', description: 'Early Adopters', status: 'upcoming', delay: 0 },
-    { mc: '$250k MC', price: '9 SOL', description: 'Growth Phase', status: 'upcoming', delay: 0.1 },
-    { mc: '$500k MC', price: '8 SOL', description: 'Expansion', status: 'upcoming', delay: 0.2 },
-    { mc: '$750k MC', price: '7 SOL', description: 'Mainstream', status: 'upcoming', delay: 0.3 },
-    { mc: '$1M MC', price: '1 SOL', description: 'Mass Adoption', status: 'upcoming', delay: 0.4 },
+    { mc: '$250k MC', price: '8 SOL', description: 'Growth Phase', status: 'upcoming', delay: 0.1 },
+    { mc: '$500k MC', price: '6 SOL', description: 'Expansion', status: 'upcoming', delay: 0.2 },
+    { mc: '$750k MC', price: '4 SOL', description: 'Mainstream', status: 'upcoming', delay: 0.3 },
+    { mc: '$1M MC', price: '2 SOL', description: 'Mass Adoption', status: 'upcoming', delay: 0.4 },
     { mc: '$5M MC', price: 'FREE', description: 'Community Release', status: 'upcoming', delay: 0.5 }
   ]
 

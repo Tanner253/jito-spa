@@ -15,10 +15,10 @@
 
 ### Pricing Tiers by Market Cap
 - **$100k MC**: 10 SOL (Early Adopters)
-- **$250k MC**: 9 SOL (Growth Phase)
-- **$500k MC**: 8 SOL (Expansion)
-- **$750k MC**: 7 SOL (Mainstream)
-- **$1M MC**: 1 SOL (Mass Adoption)
+- **$250k MC**: 8 SOL (Growth Phase)
+- **$500k MC**: 6 SOL (Expansion)
+- **$750k MC**: 4 SOL (Mainstream)
+- **$1M MC**: 2 SOL (Mass Adoption)
 - **$5M MC**: **FREE** (Community Release)
 
 ### What You Get
