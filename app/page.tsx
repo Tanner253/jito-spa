@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react'
 
-const PLACEHOLDER_CA = "TrenchPadTokenAddressWillAppearHere123456789"
+const PLACEHOLDER_CA = "7zkkPU6BRm8crunSJDW4gXPTd2X8oE1Tw5S9Lum8pump"
 
 export default function TrenchPadLanding() {
   const [copied, setCopied] = useState(false)
