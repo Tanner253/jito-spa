@@ -1,6 +1,8 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import { Copy, Check, ExternalLink, TrendingUp, Shield, Package, Rocket } from 'lucide-react'
 
 const PLACEHOLDER_CA = "7zkkPU6BRm8crunSJDW4gXPTd2X8oE1Tw5S9Lum8pump"
 
@@ -187,42 +189,115 @@ export default function TrenchPadLanding() {
           {/* Right: Pricing & Info */}
           <div className={`space-y-8 transition-all duration-1000 delay-300 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-10'}`}>
             
-            {/* Pricing */}
-            <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
-              <h3 className="text-2xl font-semibold text-white mb-6 text-center">Pricing Tiers</h3>
-              
-              <div className="space-y-3">
-                {pricingTiers.map((tier, index) => (
-                  <div 
-                    key={tier.mc}
-                    className={`flex items-center justify-between p-4 rounded-lg transition-all duration-500 ${
-                      tier.price === 'FREE' 
-                        ? 'bg-trench-900/30 border border-trench-600/50' 
-                        : 'bg-gray-900/50'
-                    }`}
-                    style={{
-                      transform: isVisible ? 'translateY(0)' : 'translateY(10px)',
-                      opacity: isVisible ? 1 : 0,
-                      transition: `all 0.4s ease-out ${tier.delay}s`
-                    }}
+            {/* Pricing Tiers */}
+            <div className="mb-12">
+              <h2 className="text-4xl font-bold text-center mb-2 tracking-tight">
+                Pricing Tiers
+              </h2>
+              <p className="text-center text-trench-400 mb-8">
+                When stable MC is achieved, the prices and purchasability will be unlocked.
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {pricingTiers.map((tier, i) => (
+                  <motion.div 
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: i * 0.1 }}
                   >
-                    <div className="flex items-center space-x-4">
-                      <span className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                        tier.price === 'FREE' ? 'bg-trench-500 text-white' : 'bg-gray-600 text-gray-300'
-                      }`}>
-                        {index + 1}
-                      </span>
-                      <div>
-                        <span className="text-white font-medium">{tier.mc}</span>
-                        <div className="text-xs text-gray-400">{tier.description}</div>
+                    <div 
+                      key={tier.mc}
+                      className={`flex items-center justify-between p-4 rounded-lg transition-all duration-500 ${
+                        tier.price === 'FREE' 
+                          ? 'bg-trench-900/30 border border-trench-600/50' 
+                          : 'bg-gray-900/50'
+                      }`}
+                      style={{
+                        transform: isVisible ? 'translateY(0)' : 'translateY(10px)',
+                        opacity: isVisible ? 1 : 0,
+                        transition: `all 0.4s ease-out ${tier.delay}s`
+                      }}
+                    >
+                      <div className="flex items-center space-x-4">
+                        <span className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
+                          tier.price === 'FREE' ? 'bg-trench-500 text-white' : 'bg-gray-600 text-gray-300'
+                        }`}>
+                          {i + 1}
+                        </span>
+                        <div>
+                          <span className="text-white font-medium">{tier.mc}</span>
+                          <div className="text-xs text-gray-400">{tier.description}</div>
+                        </div>
                       </div>
+                      <span className={`font-bold text-lg ${tier.price === 'FREE' ? 'text-trench-400' : 'text-white'}`}>
+                        {tier.price}
+                      </span>
                     </div>
-                    <span className={`font-bold text-lg ${tier.price === 'FREE' ? 'text-trench-400' : 'text-white'}`}>
-                      {tier.price}
-                    </span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
+              <p className="text-center text-trench-300 mt-8">
+                25% of all revenue from sales will be used to buyback and burn the chart.
+              </p>
+            </div>
+
+            {/* Managed Jito Bot Services */}
+            <div className="mb-12 text-center">
+              <h2 className="text-4xl font-bold mb-4">Managed Jito Bot Services</h2>
+              <p className="text-trench-400 max-w-3xl mx-auto mb-8">
+                Don't want to download or run the bot yourself? Let us handle it for you. We provide a secure and reliable service to run the Jito bot on your behalf.
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-8 text-left">
+                {/* Pricing & Fees */}
+                <div className="glass rounded-xl p-6 border border-trench-500/30">
+                  <h3 className="text-2xl font-semibold mb-4 text-trench-300">Pricing & Fees</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 mr-2 text-green-400 mt-1 flex-shrink-0" />
+                      <span><strong>Minimum Deposit:</strong> 5 SOL</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 mr-2 text-green-400 mt-1 flex-shrink-0" />
+                      <span><strong>Service Fee:</strong> 10% of deposited SOL</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 mr-2 text-green-400 mt-1 flex-shrink-0" />
+                      <span><strong>Volume Action:</strong> 0.025 SOL fee per trade</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="w-5 h-5 mr-2 text-green-400 mt-1 flex-shrink-0" />
+                      <span><strong>Bundlers:</strong> 0.00025 SOL fee per trade</span>
+                    </li>
+                  </ul>
+                </div>
+
+                {/* Key Features */}
+                <div className="glass rounded-xl p-6 border border-trench-500/30">
+                  <h3 className="text-2xl font-semibold mb-4 text-trench-300">What We Offer</h3>
+                  <ul className="space-y-3">
+                    <li className="flex items-start">
+                      <TrendingUp className="w-5 h-5 mr-2 text-blue-400 mt-1 flex-shrink-0" />
+                      <span><strong>Volume Boosting:</strong> Generate undetectable volume with up to 150 wallets.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Package className="w-5 h-5 mr-2 text-blue-400 mt-1 flex-shrink-0" />
+                      <span><strong>Advanced Bundling:</strong> Execute profitable trades on PumpFun and Raydium.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Rocket className="w-5 h-5 mr-2 text-blue-400 mt-1 flex-shrink-0" />
+                      <span><strong>Fresh Launch Dominance:</strong> Coordinated buying for new token launches.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Shield className="w-5 h-5 mr-2 text-blue-400 mt-1 flex-shrink-0" />
+                      <span><strong>Privacy & Security:</strong> Your strategies remain confidential and secure.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <p className="text-sm text-trench-500 mt-4">
+                * Wallet capacity of up to 150 is currently under testing for optimal performance.
+              </p>
             </div>
 
             {/* Contact */}

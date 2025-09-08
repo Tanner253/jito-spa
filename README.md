@@ -13,6 +13,8 @@
 
 ## 🎯 Dynamic Pricing (SOL-Based)
 
+*When stable MC is achieved, the prices and purchasability will be unlocked.*
+
 ### Pricing Tiers by Market Cap
 - **$100k MC**: 10 SOL (Early Adopters)
 - **$250k MC**: 8 SOL (Growth Phase)
@@ -20,6 +22,8 @@
 - **$750k MC**: 4 SOL (Mainstream)
 - **$1M MC**: 2 SOL (Mass Adoption)
 - **$5M MC**: **FREE** (Community Release)
+
+**💡 25% of all revenue from sales will be used to buyback and burn the chart.**
 
 ### What You Get
 - ✅ Complete TypeScript source code
