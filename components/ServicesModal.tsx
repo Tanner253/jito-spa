@@ -107,14 +107,9 @@ export default function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
               </div>
               
               <div className="text-center pt-4">
-                 <a 
-                  href="https://x.com/messages/compose?recipient_id=1588262352211329024&text=service%20-%20sol%20amount" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="bg-sky-500 hover:bg-sky-400 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 inline-block"
-                >
-                  Contact Us on X to Get Started
-                </a>
+                <div className="bg-slate-700 text-white font-bold py-3 px-8 rounded-lg">
+                  @osknyo_Dev
+                </div>
               </div>
             </div>
           </motion.div>
