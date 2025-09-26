@@ -174,10 +174,49 @@ export default function TrenchPadLanding() {
                   <p className="text-sm text-gray-400">
                     Every purchase brings us closer to the community release. Be part of the movement that democratizes advanced Solana trading tools.
                   </p>
+                  
+                  {/* New sections for buyback and bundler release */}
+                  <div className="bg-purple-800/20 p-3 rounded-lg border border-purple-600/30">
+                    <p className="text-xs text-purple-300 font-semibold mb-1">
+                      🔥 Token Buyback Program
+                    </p>
+                    <p className="text-xs text-gray-400">
+                      20% of all sales profit will be used to buy back and burn TrenchPad tokens, creating deflationary pressure and value for holders.
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-800/20 p-3 rounded-lg border border-blue-600/30">
+                    <p className="text-xs text-blue-300 font-semibold mb-1">
+                      📦 Early Access Milestone
+                    </p>
+                    <p className="text-xs text-gray-400">
+                      The complete bundler will be released to our GitHub repository once we reach 5 total purchases (25 SOL in recipient wallet).
+                    </p>
+                  </div>
+
                   <div className="bg-trench-800/30 p-3 rounded-lg border border-trench-600/30">
                     <p className="text-xs text-trench-300 text-center font-semibold">
                       💡 Early supporters get lifetime access + help unlock free access for thousands
                     </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact */}
+              <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
+                <div className="space-y-3 text-sm">
+                  <a href="https://x.com/osknyo_dev" target="_blank" className="flex items-center space-x-3 text-gray-400 hover:text-trench-400 transition-colors">
+                    <span>🐦</span>
+                    <span>Twitter: @osknyo_dev</span>
+                  </a>
+                  <a href="https://t.me/osknyo" target="_blank" className="flex items-center space-x-3 text-gray-400 hover:text-trench-400 transition-colors">
+                    <span>💬</span>
+                    <span>Telegram: @osknyo</span>
+                  </a>
+                  <div className="flex items-center space-x-3 text-gray-400">
+                    <span>💬</span>
+                    <span>Discord: osknyo</span>
                   </div>
                 </div>
               </div>
@@ -193,7 +232,7 @@ export default function TrenchPadLanding() {
                   <p className="text-gray-300 mb-6">Join the elite traders using advanced bundling</p>
                   <div className="mb-6">
                     <span className="text-5xl font-bold text-trench-400">5 SOL</span>
-                    <span className="text-slate-400 ml-2 block text-sm mt-1">~$500 USD • Lifetime Access</span>
+                    <span className="text-slate-400 ml-2 block text-sm mt-1">Lifetime Access</span>
                   </div>
                   <button
                     onClick={() => setIsPurchaseModalOpen(true)}
@@ -224,7 +263,7 @@ export default function TrenchPadLanding() {
               </div>
 
               {/* Key Features Grid */}
-              <div className="grid grid-cols-1 gap-4">
+              <div className="grid grid-cols-2 gap-3">
                 {[
                   { icon: '⚡', title: 'Lightning Fast', description: 'Sub-second execution' },
                   { icon: '🛡️', title: 'MEV Protected', description: 'Advanced protection' },
@@ -233,18 +272,70 @@ export default function TrenchPadLanding() {
                 ].map((feature, index) => (
                   <div 
                     key={feature.title}
-                    className={`p-4 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+                    className={`p-3 bg-gray-800/30 rounded-lg hover:bg-gray-800/50 transition-all duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'}`}
                     style={{ transitionDelay: `${0.4 + index * 0.1}s` }}
                   >
-                    <div className="flex items-center space-x-3">
-                      <div className="text-2xl">{feature.icon}</div>
+                    <div className="flex items-center space-x-2">
+                      <div className="text-xl">{feature.icon}</div>
                       <div>
-                        <div className="font-semibold text-white text-sm">{feature.title}</div>
+                        <div className="font-semibold text-white text-xs">{feature.title}</div>
                         <div className="text-xs text-gray-400">{feature.description}</div>
                       </div>
                     </div>
                   </div>
                 ))}
+              </div>
+
+              {/* Coming Soon Features */}
+              <div className="bg-gradient-to-br from-purple-900/20 to-trench-900/20 border border-purple-500/30 rounded-xl p-6">
+                <h3 className="text-xl font-semibold text-purple-400 mb-4 text-center flex items-center justify-center">
+                  <span className="mr-2">🚀</span> Coming Soon
+                </h3>
+                <div className="space-y-3">
+                  <div className="bg-slate-800/30 p-3 rounded-lg border border-slate-600/30">
+                    <h4 className="font-bold text-purple-300 mb-1 flex items-center text-sm">
+                      <span className="mr-2">🗺️</span> Bubble Map Evasion
+                    </h4>
+                    <p className="text-xs text-gray-400">
+                      Advanced anti-detection algorithms that make your trading activity invisible to bubble map analyzers.
+                    </p>
+                  </div>
+                  
+                  <div className="bg-slate-800/30 p-3 rounded-lg border border-slate-600/30">
+                    <h4 className="font-bold text-purple-300 mb-1 flex items-center text-sm">
+                      <span className="mr-2">⚡</span> Mega-Scale Operations
+                    </h4>
+                    <p className="text-xs text-gray-400">
+                      Coordinate 100-250 wallets simultaneously for institutional-level volume generation.
+                    </p>
+                  </div>
+
+                  <div className="bg-slate-800/30 p-3 rounded-lg border border-slate-600/30">
+                    <h4 className="font-bold text-purple-300 mb-1 flex items-center text-sm">
+                      <span className="mr-2">🎯</span> Advanced Strategies
+                    </h4>
+                    <div className="space-y-1">
+                      <div className="text-xs">
+                        <span className="text-yellow-400 font-semibold">• Phantom Ladder™:</span>
+                        <span className="text-gray-400"> Invisible price manipulation</span>
+                      </div>
+                      <div className="text-xs">
+                        <span className="text-blue-400 font-semibold">• Tsunami Protocol™:</span>
+                        <span className="text-gray-400"> Coordinated mass buying</span>
+                      </div>
+                      <div className="text-xs">
+                        <span className="text-green-400 font-semibold">• Ghost Network™:</span>
+                        <span className="text-gray-400"> Untraceable wallet flows</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-3 text-center">
+                  <p className="text-xs text-purple-300 font-semibold">
+                    Early supporters get first access to all new features
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -292,24 +383,6 @@ export default function TrenchPadLanding() {
                 </div>
               </div>
 
-              {/* Contact */}
-              <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
-                <h3 className="text-xl font-semibold text-white mb-4 text-center">Contact</h3>
-                <div className="space-y-4 text-base">
-                  <a href="https://x.com/osknyo_dev" target="_blank" className="flex items-center space-x-3 text-gray-400 hover:text-trench-400 transition-colors">
-                    <span>🐦</span>
-                    <span>Twitter: @osknyo_dev</span>
-                  </a>
-                  <a href="https://t.me/osknyo" target="_blank" className="flex items-center space-x-3 text-gray-400 hover:text-trench-400 transition-colors">
-                    <span>💬</span>
-                    <span>Telegram: @osknyo</span>
-                  </a>
-                  <div className="flex items-center space-x-3 text-gray-400">
-                    <span>💬</span>
-                    <span>Discord: osknyo</span>
-                  </div>
-                </div>
-              </div>
 
               {/* What's Included */}
               <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
@@ -360,6 +433,7 @@ export default function TrenchPadLanding() {
                   </div>
                 </div>
               </div>
+
             </div>
           </section>
           

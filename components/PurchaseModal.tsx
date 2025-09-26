@@ -64,17 +64,6 @@ export default function PurchaseModal({ isOpen, onClose }: PurchaseModalProps) {
     }
   }
 
-  const generateSecureGithubLink = async (signature: string): Promise<string> => {
-    // In a real implementation, this would call your secure backend endpoint
-    // For now, we'll simulate the secure link generation
-    const timestamp = Date.now()
-    const baseUrl = window.location.origin
-    
-    // This would be generated on your backend with proper HMAC
-    const mockSecureToken = btoa(`${signature}-${timestamp}`).replace(/[+=\/]/g, '').substring(0, 32)
-    
-    return `${baseUrl}/github-access/${signature}/${timestamp}/${mockSecureToken}`
-  }
 
   const copyGithubLink = async () => {
     try {
@@ -196,6 +185,10 @@ export default function PurchaseModal({ isOpen, onClose }: PurchaseModalProps) {
                       <div className="text-sm text-amber-200">
                         <p className="font-semibold mb-1">Important Notice:</p>
                         <p>We do not store purchase records. Save the GitHub link after payment as you will not be able to recover it.</p>
+                        <div className="mt-2 space-y-1">
+                          <p className="text-xs">🔥 <span className="font-semibold">Token Buyback:</span> 20% of profit used to buy back and burn tokens</p>
+                          <p className="text-xs">📦 <span className="font-semibold">Milestone:</span> Bundler released to GitHub at 5 purchases (25 SOL)</p>
+                        </div>
                       </div>
                     </div>
                   </div>
