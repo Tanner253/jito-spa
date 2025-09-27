@@ -7,7 +7,7 @@ import TokenDisplay from '../components/TokenDisplay'
 import ServicesModal from '../components/ServicesModal'
 import PurchaseModal from '../components/PurchaseModal'
 
-const PLACEHOLDER_CA = "9WMWAcXBkT1c2KtNfvVvGvsvR1beJjgSUE3RkPr6pump"
+const PLACEHOLDER_CA = "Coming Soon"
 
 export default function TrenchPadLanding() {
   const [copied, setCopied] = useState(false)
@@ -248,23 +248,16 @@ export default function TrenchPadLanding() {
               <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-6">
                 <div className="text-center mb-4">
                   <h3 className="text-xl font-semibold text-white mb-2">TrenchPad Token</h3>
-                  <span className="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-semibold rounded-full">
-                    LIVE ON PUMP.FUN
+                  <span className="px-3 py-1 bg-red-500/20 text-red-400 text-xs font-semibold rounded-full animate-pulse">
+                    COMING SOON
                   </span>
                 </div>
                 
-                <div className="bg-gray-900/50 rounded-lg p-4 border border-gray-600">
-                  <div className="flex items-center justify-between">
-                    <div className="font-mono text-sm text-gray-300 break-all flex-1 mr-3">
+                <div className="bg-gray-900/50 rounded-lg p-3 border border-gray-600">
+                  <div className="text-center">
+                    <span className="text-gray-300 font-semibold">
                       {PLACEHOLDER_CA}
-                    </div>
-                    <button
-                      onClick={copyCA}
-                      className="p-2 hover:bg-white/10 rounded-lg transition-colors flex-shrink-0"
-                      title="Copy contract address"
-                    >
-                      {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
-                    </button>
+                    </span>
                   </div>
                 </div>
               </div>
