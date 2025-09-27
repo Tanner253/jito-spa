@@ -7,7 +7,7 @@ import TokenDisplay from '../components/TokenDisplay'
 import ServicesModal from '../components/ServicesModal'
 import PurchaseModal from '../components/PurchaseModal'
 
-const PLACEHOLDER_CA = "9WMWAcXBkT1c2KtNfvVvGvsvR1beJjgSUE3RkPr6pump"
+const PLACEHOLDER_CA = "6kvx1iKvyX6AdUUfHM85cNNfCqMYDNhDNo2eDdNnpump"
 
 export default function TrenchPadLanding() {
   const [copied, setCopied] = useState(false)
